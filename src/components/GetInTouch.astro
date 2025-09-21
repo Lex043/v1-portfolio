@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<section
+    class="sm:border-x mx-auto border-dashed border-[#36383B] sm:w-[calc(100%-48px)] md:w-[calc(100%-96px)] lg:w-[calc(100%-144px)]"
+>
+    <section class="px-6 pb-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
+        <div class="mb-6 text-center">
+            <h1
+                class="[color:var(--heading_1_color)] mb-2 font-medium text-2xl font-serif"
+            >
+                Get in touch
+            </h1>
+            <p class="[color:var(--text-color)] text-base font-serif">
+                How to reach me.
+            </p>
+        </div>
+        <section class="md:flex justify-between items-center">
+            <div class="text-center mb-6">
+                <h1
+                    class="[color:var(--heading_1_color)] mb-2 font-medium text-xl font-serif"
+                >
+                    You can email me at
+                </h1>
+                <p class="[color:var(--text-color)] text-base font-serif">
+                    hello@lex.dev
+                </p>
+            </div>
+            <div class="text-center">
+                <h1
+                    class="[color:var(--heading_1_color)] mb-2 font-medium text-xl font-serif"
+                >
+                    Find me on
+                </h1>
+                <div class="flex items-center justify-center gap-4">
+                    <a
+                        href="https://github.com/Lex043"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><Icon
+                            class="[color:var(--heading_1_color)]"
+                            size={25}
+                            name="mdi:github"
+                        /></a
+                    >
+                    <a
+                        href="https://x.com/Lex_Feranmi"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        ><Icon
+                            class="[color:var(--heading_1_color)]"
+                            size={20}
+                            name="prime:twitter"
+                        /></a
+                    >
+                </div>
+            </div>
+        </section>
+    </section>
+</section>

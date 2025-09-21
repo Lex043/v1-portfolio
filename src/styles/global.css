@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+[data-theme="dark"] {
+    --sun: block;
+    --moon: none;
+    --mode-color: #eee;
+    --background-color: #121212;
+    --text-color: #cbc3b9;
+    --link-color: #d7d7d7;
+    --heading_1_color: #faead6;
+    --cursor-color: #fff;
+}
+
+[data-theme="light"] {
+    --sun: none;
+    --moon: block;
+    --heading_1_color: #121112;
+    --text-color: #333;
+    --link-color: #333;
+    --mode-color: #121212;
+    --cursor-color: #000;
+}
