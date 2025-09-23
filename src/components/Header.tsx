@@ -8,7 +8,7 @@ export default function Header() {
         <div className="fixed top-0 left-0 z-40 w-full border-b border-dashed border-[#36383B] bg-transparent px-6 py-8">
             <div className="mx-auto max-w-56 rounded-full border border-[#CBC3B9] bg-transparent px-6 py-2 backdrop-blur">
                 <div className="flex items-center justify-between">
-                    <h1 className="text-sm text-[#A8A29E]">
+                    <h1 className="text-sm [color:var(--text-color)]">
                         {currentItem.title}
                     </h1>
                     {currentItem.id === 3 ? (
@@ -23,7 +23,7 @@ export default function Header() {
                             )}
                         </button>
                     ) : (
-                        <p className="text-sm text-gray-300">
+                        <p className="text-sm [color:var(--text-color)]">
                             {currentItem.subtitle}
                         </p>
                     )}
