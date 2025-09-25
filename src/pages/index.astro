@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import Homepage from "../components/Homepage.astro";
+import Navbar from "../components/Navbar";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import GetInTouch from "../components/GetInTouch.astro";
@@ -10,10 +10,12 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-    <Homepage />
-    <About />
-    <Projects />
-    <Uses />
-    <GetInTouch />
-    <Footer />
+    <main>
+        <Navbar client:visible />
+        <About />
+        <Projects />
+        <Uses />
+        <GetInTouch />
+        <Footer />
+    </main>
 </Layout>

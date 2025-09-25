@@ -20,54 +20,48 @@ const projects = [
 ];
 ---
 
-<section
-    class="sm:border-x mx-auto border-dashed border-[#36383B] sm:w-[calc(100%-48px)] md:w-[calc(100%-96px)] lg:w-[calc(100%-144px)]"
->
+<section class="sm:border-x border-dashed border-[#36383B] container">
     <section class="px-6 pb-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
-        <div class="container mx-auto">
-            <header>
-                <h1 class="[color:var(--heading_1_color)] text-2xl">
-                    Projects
-                </h1>
-                <p class="[color:var(--text-color)] text-sm pt-4">
-                    A couple of projects I've worked on.
-                </p>
-                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-                    {
-                        projects.map((project) => (
-                            <div class="border border-dashed border-[#36383B] p-4 rounded-md">
-                                <div class="flex items-center justify-between">
-                                    <h3 class="[color:var(--heading_1_color)]">
-                                        {project.title}
-                                    </h3>
-                                    <a
-                                        href={project.site}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        {" "}
-                                        <Icon
-                                            class="[color:var(--heading_1_color)]"
-                                            size={25}
-                                            name="mdi:web"
-                                        />
-                                    </a>
-                                </div>
-                                <p class="[color:var(--text-color)] text-sm py-4">
-                                    {project.subtitle}
-                                </p>
-                                <div class="w-fit flex gap-3 items-center flex-wrap">
-                                    {project.tag.map((item) => (
-                                        <p class="[color:var(--heading_1_color)] border-[#36383B] font-mono py-1 px-2 text-xs border rounded-md">
-                                            {item}
-                                        </p>
-                                    ))}
-                                </div>
+        <header>
+            <h1 class="[color:var(--heading_1_color)] text-2xl">Projects</h1>
+            <p class="[color:var(--text-color)] text-sm pt-4">
+                A couple of projects I've worked on.
+            </p>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+                {
+                    projects.map((project) => (
+                        <div class="border border-dashed border-[#36383B] p-4 rounded-md">
+                            <div class="flex items-center justify-between">
+                                <h3 class="[color:var(--heading_1_color)]">
+                                    {project.title}
+                                </h3>
+                                <a
+                                    href={project.site}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {" "}
+                                    <Icon
+                                        class="[color:var(--heading_1_color)]"
+                                        size={25}
+                                        name="mdi:web"
+                                    />
+                                </a>
                             </div>
-                        ))
-                    }
-                </div>
-            </header>
-        </div>
+                            <p class="[color:var(--text-color)] text-sm py-4">
+                                {project.subtitle}
+                            </p>
+                            <div class="w-fit flex gap-3 items-center flex-wrap">
+                                {project.tag.map((item) => (
+                                    <p class="[color:var(--heading_1_color)] border-[#36383B] font-mono py-1 px-2 text-xs border rounded-md">
+                                        {item}
+                                    </p>
+                                ))}
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+        </header>
     </section>
 </section>

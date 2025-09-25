@@ -16,3 +16,28 @@
     --text-color: #333;
     --mode-color: #121212;
 }
+
+/* global.css or wherever your base styles live */
+.container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Tailwind’s breakpoints: sm = 640px, md = 768px, lg = 1024px */
+@media (min-width: 640px) {
+    .container {
+        width: calc(100% - 48px);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: calc(100% - 96px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: calc(100% - 144px);
+    }
+}
