@@ -30,7 +30,7 @@ const projects = [
             <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {
                     projects.map((project) => (
-                        <div class="border border-dashed border-[#36383B] p-4 rounded-md">
+                        <div class="border border-dashed border-[#36383B] p-4 rounded-md flex flex-col h-full">
                             <div class="flex items-center justify-between">
                                 <h3 class="[color:var(--heading_1_color)]">
                                     {project.title}
@@ -51,7 +51,7 @@ const projects = [
                             <p class="[color:var(--text-color)] text-sm py-4">
                                 {project.subtitle}
                             </p>
-                            <div class="w-fit flex gap-3 items-center flex-wrap">
+                            <div class="w-fit flex gap-3 items-center flex-wrap mt-auto">
                                 {project.tag.map((item) => (
                                     <p class="[color:var(--heading_1_color)] border-[#36383B] font-mono py-1 px-2 text-xs border rounded-md">
                                         {item}
