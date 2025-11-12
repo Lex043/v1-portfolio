@@ -5,9 +5,9 @@ export default function Navbar() {
     const { currentItem, theme, toggleTheme } = useHeader();
 
     return (
-        <nav className="fixed top-0 left-0 z-40 w-full border-dashed border-[#36383B] bg-transparent px-6 py-8 sm:border-b">
+        <nav className="fixed top-0 left-0 z-40 w-full bg-transparent px-6 py-8">
             <div className="mx-auto max-w-60 rounded-full border border-[#CBC3B9] bg-transparent px-6 py-2 backdrop-blur">
-                <div className="flex items-center justify-between text-nowrap">
+                <div className="flex items-center justify-between text-nowrap transition duration-200">
                     <h1 className="text-sm [color:var(--text-color)]">
                         {currentItem.title}
                     </h1>

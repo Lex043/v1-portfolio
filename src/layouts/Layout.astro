@@ -1,3 +1,9 @@
+---
+import "../styles/global.css";
+import Navbar from "../components/Navbar";
+const { pageTitle } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en" data-theme="dark">
     <head>
@@ -5,9 +11,10 @@
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
-        <title>Alex Oyebamiji</title>
+        <title>{pageTitle}</title>
     </head>
     <body class="min-h-screen [background:var(--background-color)]">
+        <Navbar client:visible />
         <slot />
     </body>
 </html>

@@ -4,6 +4,7 @@ import { useTheme } from "./useTheme";
 export function useHeader() {
     const [time, setTime] = useState<string | null>(null);
     const [index, setIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
     const { theme, toggleTheme } = useTheme();
 
     const header = [
@@ -32,13 +33,20 @@ export function useHeader() {
     }, []);
 
     useEffect(() => {
+        if (isPaused) return;
         const interval = setInterval(() => {
             setIndex((prev) => (prev + 1) % header.length);
         }, 3000);
         return () => clearInterval(interval);
-    }, [header.length]);
+    }, [isPaused, header.length]);
+
+    const handleThemeToggle = () => {
+        setIndex(2);
+        setIsPaused(true);
+        toggleTheme();
+    };
 
     const currentItem = header[index];
 
-    return { currentItem, theme, toggleTheme };
+    return { currentItem, theme, toggleTheme: handleThemeToggle };
 }

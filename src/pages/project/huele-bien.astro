@@ -1,0 +1,77 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+const pageTitle = "Huele Bien Website Devlopement";
+---
+
+<Layout pageTitle={pageTitle}>
+    <section class="px-6 py-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
+        <div class="mt-20">
+            <a href="/">
+                <Icon
+                    class="text-[var(--heading_1_color)]"
+                    size={20}
+                    name="back"
+                />
+            </a>
+            <p
+                class="[color:var(--text-color)] text-lg font-serif leading-7 mb-5"
+            >
+                A Developer who build web applications for companies to achieve
+                their goals, while also exploring Linux and infrastructure to
+                broaden my technical skills.
+            </p>
+            <div class="flex gap-6 items-center flex-wrap font-mono">
+                <a
+                    class="text-[var(--text-color)] text-sm h-8 px-4 bg-[var(--link-bg)] transition-colors duration-200 hover:bg-[var(--link-hover)] rounded-full leading-0 flex items-center gap-1.5"
+                    href="https://github.com/Lex043"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><Icon
+                        class="text-[var(--heading_1_color)] -mt-0.5"
+                        size={20}
+                        name="github"
+                    />
+                    Github
+                </a>
+
+                <a
+                    class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 text-sm transition-colors duration-200 hover:bg-[var(--link-hover)] leading-0 flex items-center gap-1.5"
+                    href="https://x.com/Lex_Feranmi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><Icon
+                        class="text-[var(--heading_1_color)] -mt-0.5"
+                        size={14}
+                        name="twitter"
+                    />
+                    Twitter
+                </a>
+                <a
+                    class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 leading-0 transition-colors duration-200 hover:bg-[var(--link-hover)] text-sm flex items-center gap-1.5"
+                    href="https://www.linkedin.com/in/alexoyebamiji/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <Icon
+                        class="text-[var(--heading_1_color)] -mt-0.5"
+                        size={20}
+                        name="linkedin"
+                    />
+                    Linkedin
+                </a>
+                <a
+                    class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 text-sm transition-colors duration-200 hover:bg-[var(--link-hover)] leading-0 flex items-center gap-1.5"
+                    href="mailto:alexferanmi390@gmail.com"
+                >
+                    <Icon
+                        class="text-[var(--heading_1_color)] -mt-0.5"
+                        size={20}
+                        name="mail"
+                    />
+                    Mail
+                </a>
+            </div>
+        </div>
+    </section>
+</Layout>

@@ -23,34 +23,30 @@ const uses = [
 ];
 ---
 
-<section class="sm:border-x border-dashed border-[#36383B] container">
-    <section class="px-6 pb-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
-        <h2
-            class="[color:var(--heading_1_color)] mb-3 font-medium text-2xl font-serif"
-        >
-            Uses
-        </h2>
-        <p
-            class="[color:var(--text-color)] text-base font-serif leading-7 mb-4"
-        >
-            Stuff I use Daily.
-        </p>
-        <div class="grid grid-cols-1 gap-3">
-            {
-                uses.map((use) => (
-                    <ul class="list-disc pl-4">
-                        <li class="underline [color:var(--text-color)]">
-                            <a
-                                href={use.site}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {use.name}
-                            </a>
-                        </li>
-                    </ul>
-                ))
-            }
-        </div>
-    </section>
+<section class="px-6 pb-10 md:px-14 lg:px-24 max-w-4xl mx-auto">
+    <h2
+        class="text-[var(--heading_1_color)] mb-3 font-medium text-2xl font-serif"
+    >
+        Uses
+    </h2>
+    <p class="text-[var(--text-color)] text-base font-serif leading-7 mb-4">
+        Stuff I use Daily.
+    </p>
+    <div class="grid grid-cols-1 gap-3">
+        {
+            uses.map((use) => (
+                <ul class="list-disc pl-4">
+                    <li class="underline hover:no-underline text-[var(--text-color)]">
+                        <a
+                            href={use.site}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {use.name}
+                        </a>
+                    </li>
+                </ul>
+            ))
+        }
+    </div>
 </section>

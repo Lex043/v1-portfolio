@@ -8,6 +8,7 @@ const projects = [
             "An online perfume shop offering authentic, high-quality fragrances for men and women.",
         tag: ["Next.js", "Prismic", "Typescript", "Tailwindcss"],
         site: "https://huelebienbyprudent.com",
+        link: "/project/huele-bien",
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ const projects = [
             "Aqua Resist provides sustainable, technology-driven solutions to protect communities from current and future water challenges.",
         tag: ["Next.js", "Typescript", "Tailwindcss", "Mdx"],
         site: "https://www.aquaresist.org",
+        link: "/project/aquaresist",
     },
     {
         id: 3,
@@ -30,6 +32,7 @@ const projects = [
             "Prismic",
         ],
         site: "https://www.homicksfw.com",
+        link: "/project/homicks",
     },
     {
         id: 4,
@@ -38,52 +41,54 @@ const projects = [
             "A visual and Product designer you can count on, I turn complex ideas into experiences users love and investors trust. I help SaaS, AI, and Dev founders craft story-driven brands and products.",
         tag: ["Next.js", "Typescript", "Tailwindcss", "Framer Motion", "Mdx"],
         site: "https://busayoomidiji.vercel.app",
+        link: "/project/omidiji-peter-busayo",
     },
 ];
 ---
 
-<section class="sm:border-x border-dashed border-[#36383B] container">
-    <section class="px-6 pb-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
-        <header>
-            <h1 class="[color:var(--heading_1_color)] text-2xl">Projects</h1>
-            <p class="[color:var(--text-color)] text-sm pt-4">
-                A couple of projects I've worked on.
-            </p>
-            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
-                {
-                    projects.map((project) => (
-                        <div class="border border-dashed border-[#36383B] p-4 rounded-md flex flex-col h-full">
-                            <div class="flex items-center justify-between">
-                                <h3 class="[color:var(--heading_1_color)]">
-                                    {project.title}
-                                </h3>
-                                <a
+<section class="px-6 pb-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
+    <header>
+        <h1 class="text-[var(--heading_1_color)] text-2xl">Projects</h1>
+        <p class="text-[var(--text-color)] text-base pt-4">
+            A couple of projects I've worked on.
+        </p>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
+            {
+                projects.map((project) => (
+                    <a
+                        href={project.link}
+                        class="border border-dashed border-[#36383B] p-4 rounded-md flex flex-col h-full"
+                    >
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-[var(--heading_1_color)]">
+                                {project.title}
+                            </h3>
+                            {/* <a
                                     href={project.site}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
                                     {" "}
                                     <Icon
-                                        class="[color:var(--heading_1_color)]"
+                                        class="text-[var(--heading_1_color)]"
                                         size={25}
-                                        name="mdi:web"
+                                        name="web"
                                     />
-                                </a>
-                            </div>
-                            <p class="[color:var(--text-color)] text-sm py-4">
-                                {project.subtitle}
-                            </p>
-                            <div class="w-fit flex gap-3 items-center flex-wrap mt-auto">
-                                {project.tag.map((item) => (
-                                    <p class="[color:var(--heading_1_color)] border-[#36383B] font-mono py-1 px-2 text-xs border rounded-md">
-                                        {item}
-                                    </p>
-                                ))}
-                            </div>
+                                </a> */}
                         </div>
-                    ))
-                }
-            </div>
-        </header>
-    </section>
+                        <p class="text-[var(--text-color)] text-sm py-4">
+                            {project.subtitle}
+                        </p>
+                        <div class="w-fit flex gap-3 items-center flex-wrap mt-auto">
+                            {project.tag.map((item) => (
+                                <p class="text-[var(--heading_1_color)] border-[#36383B] font-mono py-1 px-2 text-xs border rounded-md">
+                                    {item}
+                                </p>
+                            ))}
+                        </div>
+                    </a>
+                ))
+            }
+        </div>
+    </header>
 </section>

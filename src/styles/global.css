@@ -5,8 +5,10 @@
     --moon: none;
     --mode-color: #eee;
     --background-color: #121212;
-    --text-color: #cbc3b9;
-    --heading_1_color: #faead6;
+    --text-color: #f3f1f1cd;
+    --link-bg: rgba(255, 255, 255, 0.1);
+    --link-hover: rgba(255, 255, 255, 0.15);
+    --heading_1_color: #ffffff;
 }
 
 [data-theme="light"] {
@@ -14,6 +16,8 @@
     --moon: block;
     --heading_1_color: #121112;
     --text-color: #333;
+    --link-bg: rgba(0, 0, 0, 0.05);
+    --link-hover: rgba(0, 0, 0, 0.1);
     --mode-color: #121212;
 }
 

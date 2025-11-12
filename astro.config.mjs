@@ -12,13 +12,5 @@ export default defineConfig({
         plugins: [tailwindcss()],
     },
 
-    integrations: [
-        react(),
-        icon({
-            include: {
-                mdi: ["*"],
-                prime: ["*"],
-            },
-        }),
-    ],
+    integrations: [react(), icon()],
 });
