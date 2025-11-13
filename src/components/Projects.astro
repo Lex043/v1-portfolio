@@ -7,7 +7,6 @@ const projects = [
         subtitle:
             "An online perfume shop offering authentic, high-quality fragrances for men and women.",
         tag: ["Next.js", "Prismic", "Typescript", "Tailwindcss"],
-        site: "https://huelebienbyprudent.com",
         link: "/project/huele-bien",
     },
     {
@@ -16,7 +15,6 @@ const projects = [
         subtitle:
             "Aqua Resist provides sustainable, technology-driven solutions to protect communities from current and future water challenges.",
         tag: ["Next.js", "Typescript", "Tailwindcss", "Mdx"],
-        site: "https://www.aquaresist.org",
         link: "/project/aquaresist",
     },
     {
@@ -31,7 +29,6 @@ const projects = [
             "Framer Motion",
             "Prismic",
         ],
-        site: "https://www.homicksfw.com",
         link: "/project/homicks",
     },
     {
@@ -40,7 +37,6 @@ const projects = [
         subtitle:
             "A visual and Product designer you can count on, I turn complex ideas into experiences users love and investors trust. I help SaaS, AI, and Dev founders craft story-driven brands and products.",
         tag: ["Next.js", "Typescript", "Tailwindcss", "Framer Motion", "Mdx"],
-        site: "https://busayoomidiji.vercel.app",
         link: "/project/omidiji-peter-busayo",
     },
 ];
@@ -57,24 +53,17 @@ const projects = [
                 projects.map((project) => (
                     <a
                         href={project.link}
-                        class="border border-dashed border-[#36383B] p-4 rounded-md flex flex-col h-full"
+                        class="border group border-dashed border-[#36383B] hover:bg-[var(--link-bg)] transition-colors duration-500 p-4 rounded-md flex flex-col h-full"
                     >
-                        <div class="flex items-center justify-between">
+                        <div class="flex items-center gap-2">
                             <h3 class="text-[var(--heading_1_color)]">
                                 {project.title}
                             </h3>
-                            {/* <a
-                                    href={project.site}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    {" "}
-                                    <Icon
-                                        class="text-[var(--heading_1_color)]"
-                                        size={25}
-                                        name="web"
-                                    />
-                                </a> */}
+                            <Icon
+                                class="text-[var(--heading_1_color)] -rotate-45 group-hover:rotate-0 transition-transform duration-500"
+                                size={18}
+                                name="front"
+                            />
                         </div>
                         <p class="text-[var(--text-color)] text-sm py-4">
                             {project.subtitle}
