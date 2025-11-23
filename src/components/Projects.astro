@@ -1,43 +1,45 @@
 ---
 import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import aquaresist from "../images/aquaresist.png";
+import huele from "../images/huele.png";
+import homicks from "../images/homicks.png";
+import busayo from "../images/busayo.png";
+
 const projects = [
     {
         id: 1,
         title: "Huele Bien",
         subtitle:
             "An online perfume shop offering authentic, high-quality fragrances for men and women.",
-        tag: ["Next.js", "Prismic", "Typescript", "Tailwindcss"],
-        link: "/project/huele-bien",
+        img: huele,
+        link: "https://www.huelebienbyprudent.com",
     },
     {
         id: 2,
         title: "Aquaresist",
         subtitle:
             "Aqua Resist provides sustainable, technology-driven solutions to protect communities from current and future water challenges.",
-        tag: ["Next.js", "Typescript", "Tailwindcss", "Mdx"],
-        link: "/project/aquaresist",
+
+        img: aquaresist,
+        link: "https://www.aquaresist.org",
     },
     {
         id: 3,
         title: "Homicks",
         subtitle:
             "Homicks was born from a vision to seamlessly blend traditional craftsmanship with modern style. We understand that fashion is more than just clothing, it is a statement of identity, confidence, and culture.",
-        tag: [
-            "Next.js",
-            "Typescript",
-            "Tailwindcss",
-            "Framer Motion",
-            "Prismic",
-        ],
-        link: "/project/homicks",
+
+        img: homicks,
+        link: "https://www.homicksfw.com",
     },
     {
         id: 4,
         title: "Omidiji Peter Busayo",
         subtitle:
             "A visual and Product designer you can count on, I turn complex ideas into experiences users love and investors trust. I help SaaS, AI, and Dev founders craft story-driven brands and products.",
-        tag: ["Next.js", "Typescript", "Tailwindcss", "Framer Motion", "Mdx"],
-        link: "/project/omidiji-peter-busayo",
+        img: busayo,
+        link: "###",
     },
 ];
 ---
@@ -53,27 +55,32 @@ const projects = [
                 projects.map((project) => (
                     <a
                         href={project.link}
-                        class="border group border-dashed border-[#36383B] hover:bg-[var(--link-bg)] transition-colors duration-500 p-4 rounded-md flex flex-col h-full"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="border group cursor-pointer border-dashed border-[#36383B] hover:scale-[0.98] transition-transform duration-400  rounded-md flex flex-col h-full"
                     >
-                        <div class="flex items-center gap-2">
-                            <h3 class="text-[var(--heading_1_color)]">
-                                {project.title}
-                            </h3>
-                            <Icon
-                                class="text-[var(--heading_1_color)] -rotate-45 group-hover:rotate-0 transition-transform duration-500"
-                                size={18}
-                                name="front"
+                        {project.img && (
+                            <Image
+                                class="rounded-tl-md rounded-tr-md"
+                                src={project.img}
+                                alt={project.title}
                             />
-                        </div>
-                        <p class="text-[var(--text-color)] text-sm py-4">
-                            {project.subtitle}
-                        </p>
-                        <div class="w-fit flex gap-3 items-center flex-wrap mt-auto">
-                            {project.tag.map((item) => (
-                                <p class="text-[var(--heading_1_color)] border-[#36383B] font-mono py-1 px-2 text-xs border rounded-md">
-                                    {item}
-                                </p>
-                            ))}
+                        )}
+
+                        <div class="p-4">
+                            <div class="flex items-center gap-2">
+                                <h3 class="text-[var(--heading_1_color)]">
+                                    {project.title}
+                                </h3>
+                                <Icon
+                                    class="text-[var(--heading_1_color)] -rotate-45 group-hover:rotate-0 transition-transform duration-500"
+                                    size={18}
+                                    name="front"
+                                />
+                            </div>
+                            <p class="text-[var(--text-color)] text-sm py-3">
+                                {project.subtitle}
+                            </p>
                         </div>
                     </a>
                 ))
