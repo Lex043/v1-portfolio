@@ -57,7 +57,7 @@ const projects = [
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        class="border group cursor-pointer border-dashed border-[#36383B] hover:scale-[0.98] transition-transform duration-400  rounded-md flex flex-col h-full"
+                        class="group cursor-pointer hover:bg-[var(--link-hover)] hover:scale-[0.98] transition-transform duration-400  rounded-md flex flex-col h-full"
                     >
                         {project.img && (
                             <Image
@@ -67,7 +67,7 @@ const projects = [
                             />
                         )}
 
-                        <div class="p-4">
+                        <div class="p-3">
                             <div class="flex items-center gap-2">
                                 <h3 class="text-[var(--heading_1_color)]">
                                     {project.title}
