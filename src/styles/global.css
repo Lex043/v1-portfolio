@@ -46,3 +46,31 @@
         width: calc(100% - 144px);
     }
 }
+
+.under::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -2px;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: bottom right;
+    transform-origin: bottom right;
+    -webkit-transition: -webkit-transform 0.25s ease-out;
+    transition: -webkit-transform 0.25s ease-out;
+    transition: transform 0.25s ease-out;
+    transition:
+        transform 0.25s ease-out,
+        -webkit-transform 0.25s ease-out;
+}
+
+.under:hover::before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    width: 100%;
+    -webkit-transform-origin: bottom left;
+    transform-origin: bottom left;
+}
