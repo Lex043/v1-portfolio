@@ -44,10 +44,14 @@ const projects = [
 ];
 ---
 
-<section class="px-6 pb-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
+<section class="px-6 pb-10 md:px-14 lg:px-24 max-w-4xl mx-auto">
     <header>
-        <h1 class="text-[var(--heading_1_color)] text-2xl">Projects</h1>
-        <p class="text-[var(--text-color)] text-base pt-4">
+        <h1
+            class="text-[var(--heading_1_color)] font-medium text-2xl lg:text-4xl font-serif"
+        >
+            Projects
+        </h1>
+        <p class="text-[var(--text-color)] text-base mt-4">
             A couple of projects I've worked on.
         </p>
         <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -57,6 +61,7 @@ const projects = [
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Go to website"
                         class="group cursor-pointer hover:bg-[var(--link-hover)] hover:scale-[0.98] transition-transform duration-400  rounded-md flex flex-col h-full"
                     >
                         {project.img && (

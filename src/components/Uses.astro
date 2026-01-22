@@ -25,14 +25,14 @@ const uses = [
 
 <section class="px-6 pb-10 md:px-14 lg:px-24 max-w-4xl mx-auto">
     <h2
-        class="text-[var(--heading_1_color)] mb-3 font-medium text-2xl font-serif"
+        class="text-[var(--heading_1_color)] font-medium text-2xl lg:text-4xl font-serif"
     >
         Uses
     </h2>
-    <p class="text-[var(--text-color)] text-base font-serif leading-7 mb-4">
+    <p class="text-[var(--text-color)] text-base font-serif leading-7 mt-4">
         Stuff I use Daily.
     </p>
-    <div class="grid grid-cols-1 gap-3">
+    <div class="grid grid-cols-1 gap-3 mt-6">
         {
             uses.map((use) => (
                 <ul class="list-disc relative w-fit pl-4">
@@ -41,6 +41,7 @@ const uses = [
                             href={use.site}
                             target="_blank"
                             rel="noopener noreferrer"
+                            aria-label="Go to site"
                         >
                             {use.name}
                         </a>

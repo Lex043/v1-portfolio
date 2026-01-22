@@ -1,7 +1,10 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar";
-const { pageTitle } = Astro.props;
+const {
+    pageTitle,
+    description = "Frontend developer building modern web applications.",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -11,6 +14,7 @@ const { pageTitle } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
+        <meta name="description" content={description} />
         <title>{pageTitle}</title>
     </head>
     <body class="min-h-screen [background:var(--background-color)]">
