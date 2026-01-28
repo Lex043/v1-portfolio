@@ -1,17 +1,18 @@
 import { SunIcon, MoonIcon } from "@radix-ui/react-icons";
 import { useHeader } from "../hooks/useHeader";
 
-export default function Navbar() {
+type NavbarProps = {
+    pathname: string;
+};
+
+export default function Navbar({ pathname }: NavbarProps) {
     const { currentItem, theme, toggleTheme } = useHeader();
 
     return (
         <nav className="fixed top-0 left-0 z-40 w-full bg-transparent px-6 py-8">
             <section className="mx-auto flex max-w-4xl items-center justify-between md:px-14 lg:px-24">
-                <div className="w-30 rounded-full border border-[#CBC3B9] bg-transparent px-6 py-2 backdrop-blur">
+                <div className="flex h-10 w-30 items-center justify-center rounded-full border border-[#CBC3B9] bg-transparent px-6 backdrop-blur">
                     <div className="flex items-center justify-center text-nowrap transition duration-200">
-                        {/* <h1 className="text-sm [color:var(--text-color)]">
-                        {currentItem.title}
-                    </h1> */}
                         {currentItem.id === 3 ? (
                             <button
                                 onClick={toggleTheme}
@@ -30,19 +31,28 @@ export default function Navbar() {
                         )}
                     </div>
                 </div>
+
                 <div className="flex items-center gap-4">
                     <div className="relative">
                         <a
-                            className="under [color:var(--text-color)] italic"
                             href="/"
+                            className={`under [color:var(--text-color)] italic ${
+                                pathname === "/"
+                                    ? "font-semibold opacity-100"
+                                    : "opacity-60"
+                            }`}
                         >
                             home
                         </a>
                     </div>
                     <div className="relative">
                         <a
-                            className="under [color:var(--text-color)] italic"
                             href="/about"
+                            className={`under [color:var(--text-color)] italic ${
+                                pathname === "/about"
+                                    ? "font-semibold opacity-100"
+                                    : "opacity-60"
+                            }`}
                         >
                             about
                         </a>

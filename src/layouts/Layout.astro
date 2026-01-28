@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer.astro";
+const pathname = Astro.url.pathname;
 const {
     pageTitle,
     description = "Frontend developer building modern web applications.",
@@ -18,7 +20,8 @@ const {
         <title>{pageTitle}</title>
     </head>
     <body class="min-h-screen [background:var(--background-color)]">
-        <Navbar client:visible />
+        <Navbar client:visible pathname={pathname} />
         <slot />
+        <Footer />
     </body>
 </html>
