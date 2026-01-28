@@ -10,17 +10,17 @@ export function useHeader() {
     const header = [
         {
             id: 1,
-            title: "My Local Time",
+            title: "",
             subtitle: time,
         },
         {
             id: 2,
-            title: "I'm Based In",
+            title: "",
             subtitle: "NIG",
         },
         {
             id: 3,
-            title: "Theme",
+            title: "",
             subtitle: theme,
         },
     ];
