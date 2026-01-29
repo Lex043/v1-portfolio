@@ -33,30 +33,27 @@ export default function Navbar({ pathname }: NavbarProps) {
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <div className="relative">
-                        <a
-                            href="/"
-                            className={`under [color:var(--text-color)] italic ${
-                                pathname === "/"
-                                    ? "font-semibold opacity-100"
-                                    : "opacity-60"
-                            }`}
-                        >
-                            home
-                        </a>
-                    </div>
-                    <div className="relative">
-                        <a
-                            href="/about"
-                            className={`under [color:var(--text-color)] italic ${
-                                pathname === "/about"
-                                    ? "font-semibold opacity-100"
-                                    : "opacity-60"
-                            }`}
-                        >
-                            about
-                        </a>
-                    </div>
+                    <a
+                        href="/"
+                        className={`text-[var(--text-color)] italic ${
+                            pathname === "/"
+                                ? "font-semibold opacity-100"
+                                : "opacity-60"
+                        }`}
+                    >
+                        home
+                    </a>
+
+                    <a
+                        href="/about"
+                        className={`text-[var(--text-color)] italic ${
+                            pathname === "/about"
+                                ? "font-semibold opacity-100"
+                                : "opacity-60"
+                        }`}
+                    >
+                        about
+                    </a>
                 </div>
             </section>
         </nav>
