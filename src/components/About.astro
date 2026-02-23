@@ -33,8 +33,18 @@ const socials = [
 ];
 ---
 
+<script>
+    import gsap from "gsap";
+    gsap.from("#hero", {
+        opacity: 0,
+        y: 25,
+        duration: 0.5,
+        ease: "easeOut",
+    });
+</script>
+
 <section class="px-6 py-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
-    <div class="mt-16">
+    <div id="hero" class="mt-16">
         <h1
             class="[color:var(--heading_1_color)] mb-4 font-semibold text-2xl lg:text-4xl font-serif"
         >

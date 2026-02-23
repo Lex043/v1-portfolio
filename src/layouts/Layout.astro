@@ -9,7 +9,16 @@ const {
 } = Astro.props;
 ---
 
-<!doctype html>
+<script>
+    import Lenis from "lenis";
+    const lenis = new Lenis();
+    function raf(time: number) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+</script>
+
 <html lang="en" data-theme="dark">
     <head>
         <meta charset="UTF-8" />

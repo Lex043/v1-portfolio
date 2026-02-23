@@ -3,10 +3,22 @@ import Layout from "../layouts/Layout.astro";
 const pageTitle = "Alex Oyebamiji";
 ---
 
+<script>
+    import gsap from "gsap";
+    gsap.from(["#p1", "#p2", "#p3", "#p4"], {
+        opacity: 0,
+        y: 20,
+        duration: 0.5,
+        ease: "easeOut",
+        stagger: 0.2,
+    });
+</script>
+
 <Layout pageTitle={pageTitle}>
     <section class="px-6 py-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
         <div class="mt-16">
             <p
+                id="p1"
                 class="text-[var(--text-color)] text-lg font-serif leading-7 mb-5"
             >
                 I'm a frontend-focused software developer who builds
@@ -18,6 +30,7 @@ const pageTitle = "Alex Oyebamiji";
             </p>
 
             <p
+                id="p2"
                 class="text-[var(--text-color)] text-lg font-serif leading-7 mb-5"
             >
                 My work often involves building and maintaining real-world
@@ -26,6 +39,7 @@ const pageTitle = "Alex Oyebamiji";
                 backend teams.
             </p>
             <p
+                id="p3"
                 class="text-[var(--text-color)] text-lg font-serif leading-7 mb-5"
             >
                 Outside of project work, I actively explore Linux and
@@ -33,7 +47,10 @@ const pageTitle = "Alex Oyebamiji";
                 production so I can write more reliable code, debug issues
                 effectively, and make informed technical decisions.
             </p>
-            <p class="text-[var(--text-color)] text-lg font-serif leading-7">
+            <p
+                id="p4"
+                class="text-[var(--text-color)] text-lg font-serif leading-7"
+            >
                 You can view my
                 <a
                     href="/Alex_Oyebamiji_Frontend_Resume.pdf"
