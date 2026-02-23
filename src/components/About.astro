@@ -1,11 +1,42 @@
 ---
 import { Icon } from "astro-icon/components";
+
+const socials = [
+    {
+        name: "Github",
+        href: "https://github.com/Lex043",
+        icon: "github",
+        size: 20,
+        label: "Go to my github site",
+    },
+    {
+        name: "Twitter",
+        href: "https://x.com/Lex_Feranmi",
+        icon: "twitter",
+        size: 14,
+        label: "Go to my twitter site",
+    },
+    {
+        name: "Linkedin",
+        href: "https://www.linkedin.com/in/alexoyebamiji/",
+        icon: "linkedin",
+        size: 20,
+        label: "Go to my linkedin site",
+    },
+    {
+        name: "Mail",
+        href: "mailto:alexferanmi390@gmail.com",
+        icon: "mail",
+        size: 20,
+        label: "Go to my mail",
+    },
+];
 ---
 
 <section class="px-6 py-20 md:px-14 lg:px-24 max-w-4xl mx-auto">
     <div class="mt-16">
         <h1
-            class="[color:var(--heading_1_color)] mb-4 font-medium text-2xl lg:text-4xl font-serif"
+            class="[color:var(--heading_1_color)] mb-4 font-semibold text-2xl lg:text-4xl font-serif"
         >
             Alex Oyebamiji
         </h1>
@@ -15,60 +46,24 @@ import { Icon } from "astro-icon/components";
             experiences.
         </p>
         <div class="flex gap-6 items-center flex-wrap font-mono">
-            <a
-                class="text-[var(--text-color)] text-sm h-8 px-4 bg-[var(--link-bg)] transition-colors duration-200 hover:bg-[var(--link-hover)] rounded-full leading-0 flex items-center gap-1.5"
-                href="https://github.com/Lex043"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Go to my github site"
-                ><Icon
-                    class="text-[var(--heading_1_color)] -mt-0.5"
-                    size={20}
-                    name="github"
-                />
-                Github
-            </a>
-
-            <a
-                class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 text-sm transition-colors duration-200 hover:bg-[var(--link-hover)] leading-0 flex items-center gap-1.5"
-                href="https://x.com/Lex_Feranmi"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Go to my twitter site"
-                ><Icon
-                    class="text-[var(--heading_1_color)] -mt-0.5"
-                    size={14}
-                    name="twitter"
-                />
-                Twitter
-            </a>
-            <a
-                class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 leading-0 transition-colors duration-200 hover:bg-[var(--link-hover)] text-sm flex items-center gap-1.5"
-                href="https://www.linkedin.com/in/alexoyebamiji/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Go to my linkedin site"
-            >
-                <Icon
-                    class="text-[var(--heading_1_color)] -mt-0.5"
-                    size={20}
-                    name="linkedin"
-                />
-                Linkedin
-            </a>
-            <a
-                class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 text-sm transition-colors duration-200 hover:bg-[var(--link-hover)] leading-0 flex items-center gap-1.5"
-                href="mailto:alexferanmi390@gmail.com"
-                target="_blank"
-                aria-label="Go to my mail"
-            >
-                <Icon
-                    class="text-[var(--heading_1_color)] -mt-0.5"
-                    size={20}
-                    name="mail"
-                />
-                Mail
-            </a>
+            {
+                socials.map((item) => (
+                    <a
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={item.label}
+                        class="text-[var(--text-color)] bg-[var(--link-bg)] h-8 rounded-full px-4 text-sm transition-colors duration-200 hover:bg-[var(--link-hover)] flex items-center gap-1.5 active:scale-[0.97]"
+                    >
+                        <Icon
+                            class="text-[var(--heading_1_color)] -mt-0.5"
+                            size={item.size}
+                            name={item.icon}
+                        />
+                        {item.name}
+                    </a>
+                ))
+            }
         </div>
     </div>
 </section>
