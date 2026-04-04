@@ -3,22 +3,32 @@ const uses = [
     {
         id: 1,
         name: "Chrome",
+        use: "Primary web browser",
         site: "https://www.google.com/chrome/",
     },
     {
         id: 2,
         name: "Spotify",
+        use: "Music streaming",
         site: "https://www.spotify.com",
     },
     {
         id: 3,
         name: "Visual Studio Code",
+        use: "Code editor",
         site: "https://code.visualstudio.com",
     },
     {
         id: 4,
         name: "Postman",
+        use: "API testing",
         site: "https://www.postman.com",
+    },
+    {
+        id: 5,
+        name: "Figma",
+        use: "Design Collaboration",
+        site: "https://www.figma.com",
     },
 ];
 ---
@@ -46,18 +56,24 @@ const uses = [
     <div class="grid grid-cols-1 gap-3 mt-6">
         {
             uses.map((use) => (
-                <ul class="list-disc relative w-fit pl-4">
-                    <li class="under text-[var(--text-color)]">
-                        <a
-                            href={use.site}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Go to site"
-                        >
-                            {use.name}
-                        </a>
-                    </li>
-                </ul>
+                <div class="flex items-center">
+                    <ul class="list-disc relative w-fit pl-4">
+                        <li class="under text-[var(--text-color)]">
+                            <a
+                                href={use.site}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Go to site"
+                            >
+                                <span class="under"> {use.name}</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <span class="mx-2 text-[var(--text-color)]">-</span>
+                    <span class="text-sm text-[var(--text-color)]">
+                        {use.use}
+                    </span>
+                </div>
             ))
         }
     </div>
